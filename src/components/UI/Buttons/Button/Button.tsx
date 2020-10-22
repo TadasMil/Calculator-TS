@@ -1,16 +1,17 @@
 import React from 'react'
-import { NumberProp } from '../../../Interfaces/Number'
+import { IButton } from '../../../Interfaces/IButton'
 
 interface ButtonProps {
-    handleNumberInput: (number: NumberProp) => void;
-    buttonData: NumberProp
+    handleButtonInput: (buttonData: IButton) => void;
+    buttonData: IButton;
+    buttonStyling: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ handleNumberInput, buttonData }) => {
-    const { number } = buttonData;
+export const Button: React.FC<ButtonProps> = ({ handleButtonInput, buttonData, buttonStyling }) => {
+    const { type } = buttonData;
     return (
-        <div>
-            <button onClick={() => handleNumberInput(buttonData)}>{number}</button>
-        </div>
+        <>
+            <button className={buttonStyling} onClick={() => handleButtonInput(buttonData)}>{type}</button>
+        </>
     )
 }

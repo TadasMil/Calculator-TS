@@ -1,0 +1,35 @@
+.Calculator {
+  display: flex;
+}
+.CalculatorMultiNumber {
+  flex-direction: column;
+  display: flex;
+}
+
+.ButtonWrapList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.OperatorList {
+  display: flex;
+  flex-direction: column;
+}
+
+.Button {
+  flex: 0 0 30%;
+  margin: 5px 3px;
+  padding: 10px 3px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.ButtonSingle {
+  @extend .Button;
+  flex: 0;
+  padding: 10px 10px;
+}
